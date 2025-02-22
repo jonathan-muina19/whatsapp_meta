@@ -19,7 +19,9 @@ class Uihelper {
       height: 45,
       width: 350,
       child: ElevatedButton(
+        
         style: ElevatedButton.styleFrom(
+          
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(40)
           )
@@ -33,6 +35,7 @@ class Uihelper {
           fontSize: 17,
           color: Colors.white
       ),
+      
     )
       ),
     );

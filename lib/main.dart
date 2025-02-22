@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_meta/pages/authentification/authentification.dart';
 import 'package:whatsapp_meta/pages/splash/splash_screen.dart';
 
 void main() {
@@ -11,17 +12,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.black,
         scaffoldBackgroundColor: Colors.black,
          appBarTheme: AppBarTheme(
           backgroundColor: Colors.black,
         ),
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          secondary: Colors.black,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0XFF00A884)
         ),
+        useMaterial3: false
       ),
       home: SplashScreen(),
+      routes: {
+        '/authenfication':(context)=>AuthentificationPages()
+      },
     );
   }
 }
