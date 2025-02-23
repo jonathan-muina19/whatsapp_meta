@@ -16,8 +16,8 @@ class Uihelper {
 
   static customButton({required VoidCallback callback, required String buttonName}){
     return SizedBox(
-      height: 45,
-      width: 350,
+      height: 40,
+      width: 360,
       child: ElevatedButton(
         
         style: ElevatedButton.styleFrom(
