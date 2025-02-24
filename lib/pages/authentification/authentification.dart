@@ -115,7 +115,7 @@ class _AuthentificationPagesState extends State<AuthentificationPages> {
                 decoration: InputDecoration(
                   hintText: '+243',
                   hintStyle: TextStyle(
-                    color: Colors.white
+                    color: Colors.grey
                   ),
                   border: UnderlineInputBorder(
                     borderSide: BorderSide(color: Color(0XFF00A884))
@@ -133,6 +133,9 @@ class _AuthentificationPagesState extends State<AuthentificationPages> {
             SizedBox(
               width: 200,
               child: TextField(
+                style: TextStyle(
+                  color: Colors.white
+                ),
                 keyboardType: TextInputType.number,
                 controller:phoneController ,
                 decoration: InputDecoration(
@@ -149,7 +152,7 @@ class _AuthentificationPagesState extends State<AuthentificationPages> {
     ),
     floatingActionButton: Uihelper.customButton(
       callback: (){
-
+        Navigator.popAndPushNamed(context, '/verify_number');
       }, 
       buttonName: 'Suivant'
     ),

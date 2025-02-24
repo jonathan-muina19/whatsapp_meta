@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_meta/pages/authentification/authentification.dart';
 import 'package:whatsapp_meta/pages/splash/splash_screen.dart';
+import 'package:whatsapp_meta/pages/verify_number/verify_number.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       ),
       home: SplashScreen(),
       routes: {
-        '/authenfication':(context)=>AuthentificationPages()
+        '/authenfication':(context)=>AuthentificationPages(),
+        '/verify_number' : (context)=> VerifyNumber()
       },
     );
   }
