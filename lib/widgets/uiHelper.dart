@@ -31,7 +31,7 @@ class Uihelper {
         }, 
         child: Text(buttonName,
         style: TextStyle(
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.bold,
           fontSize: 17,
           color: Colors.black
       ), 
@@ -39,6 +39,30 @@ class Uihelper {
       ),
     );
 
+  }
+
+  static customotpTextFiled(TextEditingController controller){
+    return SizedBox(
+      width: 10,
+      child:TextField(
+        style: TextStyle(color: Colors.white),
+        textAlign: TextAlign.start,
+        cursorHeight: 30,
+        cursorColor: Colors.green,
+        decoration: InputDecoration(
+          border: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey)
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color:  Colors.grey)
+          ),
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color:  Colors.grey)
+          ),
+          
+        )
+      )
+    );
   }
 
 }

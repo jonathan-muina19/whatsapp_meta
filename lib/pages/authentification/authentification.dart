@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_meta/pages/otp/otp_screen.dart';
 import 'package:whatsapp_meta/widgets/uiHelper.dart';
 
 class AuthentificationPages extends StatefulWidget {
@@ -22,6 +23,17 @@ class _AuthentificationPagesState extends State<AuthentificationPages> {
     'USA',
     'LUXEMBOURG'
   ];
+
+  login(String phoneNumber){
+    if(phoneNumber == ''){
+      return ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Entrez votre numero'))
+        );
+    }
+    else{
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>OtpScreen(telephone: phoneNumber)));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +116,7 @@ class _AuthentificationPagesState extends State<AuthentificationPages> {
             ),
           ),
         ),
-                SizedBox(height: 10),
+        SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -152,7 +164,7 @@ class _AuthentificationPagesState extends State<AuthentificationPages> {
     ),
     floatingActionButton: Uihelper.customButton(
       callback: (){
-        Navigator.popAndPushNamed(context, '/verify_number');
+        login(phoneController.text.toString());
       }, 
       buttonName: 'Suivant'
     ),

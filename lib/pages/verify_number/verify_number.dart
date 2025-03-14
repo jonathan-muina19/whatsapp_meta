@@ -38,11 +38,9 @@ class VerifyNumber extends StatelessWidget {
           ),
           SizedBox(height: 30),
          Container(
-          
           decoration: BoxDecoration(
             color: Colors.black,
             borderRadius: BorderRadius.circular(0),
-            
           ),
           padding: EdgeInsets.all(16.0),
           child: Row(
@@ -56,7 +54,7 @@ class VerifyNumber extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Uihelper.customText(
-                    text: 'Autorisez WhatsAppa gerer cet appel afin', 
+                    text: 'Autorisez WhatsApp gerer cet appel afin', 
                     height: 15,
                     fontweight: FontWeight.bold
                   ),
@@ -105,25 +103,25 @@ class VerifyNumber extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Uihelper.customText(
-                    text: 'Autorisez WhatsAppa gerer cet appel afin', 
+                    text: 'Autorisez WhatsApp a proceder a une', 
                     height: 15,
                     fontweight: FontWeight.bold
                   ),
                   SizedBox(height: 5),
                   Uihelper.customText(
-                    text: 'que nous puissions appeler votre numero', 
+                    text: "verification unique et acceder a votre", 
                     height: 14,
                     color: Colors.grey
                   ),
                   SizedBox(height: 5),
                   Uihelper.customText(
-                    text: 'de telephone et mettre automatiquement', 
+                    text: "journal d'appels afin que nous puissons", 
                     height: 14,
                     color: Colors.grey
                   ),
                   SizedBox(height: 5),
                   Uihelper.customText(
-                    text: "fin l'appel", 
+                    text: "confirner que vous aves bien recu l'appel", 
                     height: 14,
                     color: Colors.grey
                   ),
@@ -147,11 +145,12 @@ class VerifyNumber extends StatelessWidget {
         ),
         SizedBox(height: 97),
         Uihelper.customButton(
-          callback: (){}, 
+          callback: (){
+            Navigator.popAndPushNamed(context, '/otp_screen');
+          }, 
           buttonName: 'Continuer',
         ),
         TextButton(
-          
           onPressed: (){}, 
           child: Uihelper.customText(
             fontweight: FontWeight.bold,
