@@ -10,7 +10,7 @@ class ConnexionScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 150),
+            SizedBox(height: 100),
             Icon(Icons.group_add_outlined,color: Colors.green, size: 80),
             SizedBox(height:20),
             Uihelper.customText(text: 'Connectez-vous en toute', height: 25),
@@ -143,11 +143,15 @@ class ConnexionScreen extends StatelessWidget {
          ),
          SizedBox(height:10),
          Uihelper.customButton(
-          callback: (){}, 
+          callback: (){
+            Navigator.pushNamed(context, '/chat_screen');
+          }, 
           buttonName: 'Continuer'
         ),
         TextButton(
-          onPressed: (){}, 
+          onPressed: (){
+            Navigator.pop(context);
+          }, 
           child: Uihelper.customText(text: 'Ignorer', height: 18, color: Colors.green))
       ],
           
